@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuestas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .answer {
+            margin: 20px 0;
+        }
+
+        .correct {
+            background-color: green;
+            color: white;
+        }
+
+        .incorrect {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Respuestas</h1>
+
+    <div id="answers"></div>
+
+    <script>
+        let answers = JSON.parse(localStorage.getItem('answers'));
+
+        let answersHTML = '';
+
+        answers.forEach(answer => {
+            let answerClass = answer.correct ? 'correct' : 'incorrect';
+            answersHTML += `
+                <div class="answer ${answerClass}">
+                    <p>${answer.question}</p>
+                    <p>Tu respuesta: ${answer.correct ? 'Correcta' : 'Incorrecta'}</p>
+                    <p>Respuesta correcta: ${answer.correctAnswer}</p>
+                </div>
+            `;
+        });
+
+        document.getElementById('answers').innerHTML = answersHTML;
+    </script>
+</body>
+
+</html>

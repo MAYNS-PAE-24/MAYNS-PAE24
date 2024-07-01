@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Quechua</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .option.correct {
+            background-color: green;
+            color: white;
+        }
+
+        .option.incorrect {
+            background-color: red;
+            color: white;
+        }
+
+        #guardar {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="question" data-correct="2">
+        <p>¿Cómo se dice "Hola" en quechua?</p>
+        <div class="option">A. Adiós</div>
+        <div class="option" data-correct="true">B. Rimaykullayki</div>
+        <div class="option">C. ¿Cómo estás?</div>
+    </div>
+    <div class="question" data-correct="1">
+        <p>¿Qué significa "Tupananchiskama"?</p>
+        <div class="option" data-correct="true">A. Hasta luego</div>
+        <div class="option">B. Buenos días</div>
+        <div class="option">C. Buenas noches</div>
+    </div>
+
+    <button id="guardar">Guardar</button>
+
+    <script>
+        let questions = document.querySelectorAll('.question');
+        let answers = [];
+
+        questions.forEach(question => {
+            let options = question.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function () {
+                    let correctOption = question.querySelector('.option[data-correct="true"]');
+                    if (option === correctOption) {
+                        option.classList.add('correct');
+                    } else {
+                        option.classList.add('incorrect');
+                    }
+
+                    // Disable all options for this question after selecting an answer
+                    let allOptions = question.querySelectorAll('.option');
+                    allOptions.forEach(opt => {
+                        opt.style.pointerEvents = 'none';
+                    });
+
+                    // Save answer
+                    let answer = {
+                        question: question.textContent,
+                        correct: option === correctOption,
+                        correctAnswer: correctOption.textContent
+                    };
+                    answers.push(answer);
+                });
+            });
+        });
+
+        document.getElementById('guardar').addEventListener('click', function () {
+            // Save answers to localStorage
+            localStorage.setItem('answers', JSON.stringify(answers));
+
+            // Redirect to next page
+            window.location.href = file:///C:/Users/TOSHIBA/Desktop/MAYNS%20PAE/HTML/Respuesta;
+        });
+    </script>
+</body>
+
+</html>

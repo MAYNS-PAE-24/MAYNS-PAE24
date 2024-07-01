@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Botones Centrados</title>
+    <style>
+        /* Estilos para los botones */
+        .button {
+            background-color: #2600ff;
+            /* Color rojo */
+            color: #FFFFFF;
+            /* Texto blanco */
+            padding: 50px 80px;
+            /* Espacio interior del botón */
+            border: none;
+            /* Sin borde */
+            border-radius: 5px;
+            /* Esquinas redondeadas */
+            cursor: pointer;
+            /* Cursor en forma de mano */
+        }
+
+        .button:hover {
+            background-color: #CC0000;
+            /* Color rojo oscuro al pasar el cursor */
+        }
+
+        /* Centrar los botones */
+        .container {
+            text-align: center;
+            /* Centrar los botones horizontalmente */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor para centrar los botones -->
+    <div class="container">
+        <!-- Botón 1: Diccionario -->
+        <button class="button" onclick="location.href='diccionario.html'">Diccionario</button>
+        <br><br> <!-- Espacio entre botones -->
+
+        <!-- Botón 2: Preguntas -->
+        <button class="button" onclick="location.href='http://127.0.0.1:5500/menu_inicio.html'">Preguntas</button>
+        <br><br> <!-- Espacio entre botones -->
+
+        <!-- Botón 3: Textos -->
+        <button class="button" onclick="location.href='http://127.0.0.1:5500/Textos.html'">Textos</button>
+        <br><br> <!-- Espacio entre botones -->
+
+        <!-- Botón 4: Salir -->
+        <button class="button" onclick="location.href='salir.html'">Salir</button>
+    </div>
+</body>
+
+</html>

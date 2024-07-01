@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portada de Página Web</title>
+    <style>
+        /* Estilos para la portada */
+        body {
+            background-color: #f2f2f2;
+            /* Fondo claro */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 80%;
+            /* Ancho del contenedor */
+            margin: 40px auto;
+            /* Margen superior e inferior de 40px, y centrado horizontalmente */
+            background-color: #fff;
+            /* Fondo blanco */
+            padding: 20px;
+            /* Espacio interior de 20px */
+            border: 1px solid #ddd;
+            /* Borde gris claro */
+            border-radius: 10px;
+            /* Esquinas redondeadas */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Sombra leve */
+        }
+
+        /* Espacio para la imagen */
+        .image-container {
+            width: 100%;
+            /* Ancho del contenedor de la imagen */
+            height: 700px;
+            /* Alto del contenedor de la imagen */
+            margin: 20px auto;
+            /* Margen superior e inferior de 20px, y centrado horizontalmente */
+            background-color: #fff;
+            /* Fondo blanco */
+            padding: 10px;
+            /* Espacio interior de 10px */
+            border: 1px solid #ddd;
+            /* Borde gris claro */
+            border-radius: 10px;
+            /* Esquinas redondeadas */
+        }
+
+        /* Imagen */
+        .image {
+            width: 40%;
+            /* Ancho de la imagen */
+            height: 100%;
+            /* Alto de la imagen */
+            object-fit: cover;
+            /* Ajustar la imagen al contenedor */
+            border-radius: 10px;
+            /* Esquinas redondeadas */
+        }
+
+        /* Estilos para el botón */
+        .button {
+            background-color: #FF0000;
+            /* Color rojo */
+            color: #FFFFFF;
+            /* Texto blanco */
+            padding: 10px 20px;
+            /* Espacio interior del botón */
+            border: none;
+            /* Sin borde */
+            border-radius: 5px;
+            /* Esquinas redondeadas */
+            cursor: pointer;
+            /* Cursor en forma de mano */
+        }
+
+        .button:hover {
+            background-color: #CC0000;
+            /* Color rojo oscuro al pasar el cursor */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Espacio para la imagen -->
+        <div class="image-container">
+            <!-- Imagen (reemplaza con la ruta de tu imagen) -->
+            <img src="imagenes/images.jpg" alt="Imagen de portada" class="image">
+        </div>
+        <!-- Título y texto (opcional) -->
+        <h1>Bienvenidos a MAYNS PAE</h1>
+        <!-- Botón que nos lleva a otra página -->
+        <button class="button" onclick="location.href='http://127.0.0.1:5500/menu.html'">Empezar</button>
+        <audio id="correctAudio"
+            src="audios/------------ ------------ - ------------------ ( -------- ----   ------------) _------------ --------------_(MP3_70K).mp3"
+            controls></audio>
+    </div>
+</body>
+
+</html>
